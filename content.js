@@ -254,6 +254,31 @@ if (window.location.href.includes("https://pieraksts.mfa.gov.lv/en/india/step4")
         }
     }, 1000);
 
+    chrome.storage.local.get(["usercode"], function (result) {
+        usercode = result.usercode;
+
+        const invitationCode = usercode;
+
+        // 1. টার্গেট র‍্যাপারটি সিলেক্ট করুন
+        const wrapper = document.querySelector('.section-base--wrapper');
+
+        // 2. র‍্যাপারটি পেজে আছে কিনা তা চেক করে নিন
+        if (wrapper) {
+            // 3. নতুন একটি <h1> এলিমেন্ট তৈরি করুন
+            const h1Element = document.createElement('h1');
+            h1Element.style.cssText = "color: #ff5722; text-align: center; font-size: 28px; margin-bottom: 15px;padding:25px;border:1px solid #ff5722;margin-bottom:25px";
+            // 4. <h1> এর ভেতরে টেক্সট বা কোড বসান
+            h1Element.textContent = `${invitationCode}`;
+
+            // (ঐচ্ছিক) যদি <h1> এ কোনো ক্লাস দিতে চান
+            // h1Element.classList.add('invitation-title');
+
+            // 5. র‍্যাপারের একদম শুরুতে (top এ) <h1> টি ইনজেক্ট করুন
+            wrapper.prepend(h1Element);
+        }
+
+    });
+
 }
 
 //Step 2 Auto Complete :
