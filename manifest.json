@@ -3,28 +3,45 @@
   "name": "Appointment Alert",
   "version": "1.0",
   "description": "Appointment alert extension",
-
   "permissions": [
     "activeTab",
     "scripting",
     "storage"
   ],
-
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/favicon.png",
+      "32": "icons/favicon.png",
+      "48": "icons/favicon.png",
+      "128": "icons/favicon.png"
+    }
   },
 
+  "icons": {
+    "16": "icons/favicon.png",
+    "32": "icons/favicon.png",
+    "48": "icons/favicon.png",
+    "128": "icons/favicon.png"
+  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ],
-
   "web_accessible_resources": [
     {
-      "resources": ["audio/appointment-alert.mp3"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "audio/appointment-alert.mp3"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }

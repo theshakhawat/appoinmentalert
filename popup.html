@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Appointment Alert</title>
-    <link rel="stylesheet" href="popup.css">
+  <meta charset="UTF-8">
+  <title>Appointment Alert</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <h2>Appointment Alert</h2>
+    <h2>Appointment Alert</h2>
 
-        <label class="switch">
-            <input type="checkbox" id="toggle">
-            <span class="slider"></span>
-        </label>
+    <label class="switch">
+      <input type="checkbox" id="toggle">
+      <span class="slider"></span>
+    </label>
 
-        <p id="status">OFF</p>
+    <p id="status">OFF</p>
 
+  </div>
+
+  <div id="userdata">
+
+    <input type="text" placeholder="name" id="username">
+    <input type="text" placeholder="surname" id="surname">
+    <input type="email" placeholder="email" id="useremail">
+    <input type="text" placeholder="User Phone" maxlength="14" id="userphone">
+    <input type="text" placeholder="Invitation code" id="usercode">
+    <div class="flexkor">
+      <button id="saveBtn">Save</button>
+      <button id="resetBtn" >Reset</button>
     </div>
+    <span id="Savestatus"></span>
+  </div>
 
-    <script src="popup.js"></script>
+  <script src="popup.js"></script>
 
 </body>
+
 </html>

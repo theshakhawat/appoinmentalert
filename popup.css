@@ -89,3 +89,46 @@ input:checked + .slider::before {
 input:checked ~ #status {
     color: #2563eb;
 }
+
+
+
+/* Form */
+
+#userdata{
+    width: 80%;
+    margin: 20px auto;
+}
+
+#userdata input{
+    width: 100%;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#userdata button{
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    background-color:orange;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    outline: none;
+    cursor: pointer;
+}
+
+.flexkor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 30px;
+    gap: 4;
+}
+#resetBtn{
+    background:red !important;
+    color: white !important;
+}
